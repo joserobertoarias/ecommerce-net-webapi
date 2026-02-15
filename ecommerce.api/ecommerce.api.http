@@ -18,9 +18,11 @@ Content-Type: application/json
   "UserType": 1
 }
 
+
 ###
 GET {{api_HostAddress}}/api/user/1
 Accept: application/json
+
 
 ###
 GET {{api_HostAddress}}/api/user/by-email/john.smith@email.com
