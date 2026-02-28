@@ -10,7 +10,7 @@ public class ApplicationDbContext(DbContextOptions options,
     IConfiguration configuration) : DbContext (options)
 {
     #region Entities
-    public DbSet<Users.User> Users { get; set; }
+    public DbSet<User> Users { get; set; }
     #endregion
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

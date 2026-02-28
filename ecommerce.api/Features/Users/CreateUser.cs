@@ -62,7 +62,7 @@ public class CreateUser
                 async () => await CreateUserAsync(query, cancellationToken), cancellationToken);
         }
 
-        public async Task<BaseResponse<bool>> CreateUserAsync(CreateUserCommand query,
+        private async Task<BaseResponse<bool>> CreateUserAsync(CreateUserCommand query,
             CancellationToken cancellationToken)
         {
             var response = new BaseResponse<bool>();
