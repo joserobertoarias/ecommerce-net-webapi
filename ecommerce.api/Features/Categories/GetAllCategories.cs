@@ -36,10 +36,10 @@ public class GetAllCategories
             const string sql = @"
                 SELECT 
                     ""Id"",
-                    ""Name"",
+                    ""CategoryName"",
                     ""CreateDate"",
                     ""UpdateDate""
-                FROM public.""Categories""
+                FROM public.""Category""
                 ORDER BY ""Id"";";
 
             try

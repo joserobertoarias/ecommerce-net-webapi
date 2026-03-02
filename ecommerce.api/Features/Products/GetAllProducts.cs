@@ -41,8 +41,8 @@ public class GetAllProducts
                     ""Description"",
                     ""UrlImage"",
                     ""Price"",
-                    ""CreatedDate"",
-                    ""UpdatedDate"",
+                    ""CreateDate"",
+                    ""UpdateDate"",
                     ""UserId"",
                     ""CategoryId""
                 FROM public.""Products""

@@ -27,3 +27,76 @@ Accept: application/json
 ###
 GET {{api_HostAddress}}/api/user/by-email/john.smith@email.com
 Accept: application/json
+
+
+### Categories
+
+###
+POST {{api_HostAddress}}/api/categories
+Content-Type: application/json
+
+{
+  "name": "Electronics"
+}
+
+###
+GET {{api_HostAddress}}/api/categories
+Accept: application/json
+
+###
+GET {{api_HostAddress}}/api/categories/3
+Accept: application/json
+
+###
+PUT {{api_HostAddress}}/api/categories/3
+Content-Type: application/json
+
+{
+  "name": "Electronics Updated"
+}
+
+###
+DELETE {{api_HostAddress}}/api/categories/4
+Accept: application/json
+
+### Products
+
+###
+POST {{api_HostAddress}}/api/product
+Content-Type: application/json
+
+{
+  "Name": "Laptop Pro 15",
+  "Code": "LAP-001",
+  "Description": "High performance laptop",
+  "UrlImage": "https://example.com/laptop.jpg",
+  "Price": 1299.99,
+  "UserId": 1,
+  "CategoryId": 3
+}
+
+###
+GET {{api_HostAddress}}/api/products
+Accept: application/json
+
+###
+GET {{api_HostAddress}}/api/products/2
+Accept: application/json
+
+###
+PUT {{api_HostAddress}}/api/products/2
+Content-Type: application/json
+
+{
+  "Name": "Laptop Pro 15 Updated",
+  "Code": "LAP-001",
+  "Description": "High performance laptop updated",
+  "UrlImage": "https://example.com/laptop.jpg",
+  "Price": 1199.99,
+  "UserId": 1,
+  "CategoryId": 3
+}
+
+###
+DELETE {{api_HostAddress}}/api/products/2
+Accept: application/json

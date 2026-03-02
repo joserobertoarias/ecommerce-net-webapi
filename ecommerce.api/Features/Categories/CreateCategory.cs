@@ -50,9 +50,9 @@ public class CreateCategory
             var response = new BaseResponse<bool>();
 
             const string sql = @"
-                INSERT INTO public.""Categories""
+                INSERT INTO public.""Category""
                     (
-                        ""Name"",
+                        ""CategoryName"",
                         ""CreateDate""
                     )
                 VALUES
@@ -63,13 +63,15 @@ public class CreateCategory
 
             try
             {
-                using var connection = _context.CreateConnection();
+                
+                using var connection = context.CreateConnection();
+                var parameters = new DynamicParameters();
+                parameters.Add("Name", command.Name);
 
-                var result = await connection.ExecuteAsync(sql, new { command.Name });
-
-                response.IsSuccess = true;
+                var result = await connection.ExecuteAsync(sql, parameters);
+                response.IsSuccess = result > 0;
                 response.Data = result > 0;
-                response.Message = "Se registró correctamente.";
+                response.Message = "Se registro correctamente";
             }
             catch (Exception ex)
             {

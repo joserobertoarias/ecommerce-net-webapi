@@ -51,10 +51,10 @@ public class GetByIdCategory
             const string sql = @"
                 SELECT 
                     ""Id"",
-                    ""Name"",
+                    ""CategoryName"",
                     ""CreateDate"",
                     ""UpdateDate""
-                FROM public.""Categories""
+                FROM public.""Category""
                 WHERE ""Id"" = @Id;";
 
             try

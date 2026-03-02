@@ -48,7 +48,7 @@ public class DeleteCategory
             var response = new BaseResponse<bool>();
 
             const string sql = @"
-                DELETE FROM public.""Categories""
+                DELETE FROM public.""Category""
                 WHERE ""Id"" = @Id;";
 
             try

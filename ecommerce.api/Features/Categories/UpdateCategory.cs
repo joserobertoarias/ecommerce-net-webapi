@@ -55,9 +55,9 @@ public class UpdateCategory
             var response = new BaseResponse<bool>();
 
             const string sql = @"
-                UPDATE public.""Categories""
+                UPDATE public.""Category""
                 SET 
-                    ""Name"" = @Name,
+                    ""CategoryName"" = @Name,
                     ""UpdateDate"" = NOW()
                 WHERE ""Id"" = @Id;";
 
